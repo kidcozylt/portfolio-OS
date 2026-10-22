@@ -1,16 +1,17 @@
-# React + Vite
+# portfolio-OS
+Portfolio personnel développé avec Next.js.
+On peut y trouver des informations sur mon parcours, mes compétences acquises au cours de ma formation et lors de projets personnels ainsi que des informations sur mon BTS SIO (option SLAM).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+L'interface de ce portfolio a pour but de rappeler celle des environnements de développement.
 
-Currently, two official plugins are available:
+Technologies utilisées
+Next.js — Framework React pour le développement web.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React — Création d'interfaces utilisateur interactives.
 
-## React Compiler
+JavaScript — Développement et logique applicative.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+CSS — Mise en page et personnalisation du design.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+N'hésitez pas à explorer mes projets et à me contacter pour échanger autour du développement web ou d'éventuelles opportunités de collaboration.
