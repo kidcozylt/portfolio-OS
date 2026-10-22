@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.puissance4 {
+    --red: #e60012;
+    --red-dark: #8f000b;
+    --black: #0a0a0a;
+    --grey: #2a2a2a;
+    --white: #ffffff;
+    --yellow: #ffe600;
+    --cell: min(7vh, 9vw);
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+    padding: 1vh 10px;
+    font-family: 'Press Start 2P', monospace;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--red);
+    background-image:
+        linear-gradient(45deg, rgba(0, 0, 0, 0.3) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.3) 75%),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.3) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.3) 75%),
+        linear-gradient(115deg, transparent 0 55%, var(--black) 55% 62%, transparent 62% 100%),
+        linear-gradient(115deg, var(--red-dark) 0 30%, transparent 30% 100%);
+    background-size: 16px 16px, 16px 16px, 100% 100%, 100% 100%;
+    background-position: 0 0, 8px 8px, 0 0, 0 0;
+}
+
+.puissance4 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+}
+
+.puissance4 h1 {
+    margin: 0;
+    padding: 1.5vh 24px;
+    font-size: clamp(0.9rem, 4vh, 2rem);
+    color: var(--black);
+    background: var(--white);
+    border: 4px solid var(--black);
+    transform: rotate(-3deg);
+    text-shadow: 4px 4px 0 var(--red);
+    box-shadow:
+        6px 6px 0 var(--black),
+        10px 10px 0 var(--red-dark);
+}
+
+.puissance4 h3 {
+    margin: 0;
+    padding: 1.2vh 20px;
+    font-size: clamp(0.5rem, 1.9vh, 0.8rem);
+    line-height: 1.5;
+    text-align: center;
+    color: var(--white);
+    background: var(--black);
+    border: 4px solid var(--white);
+    transform: rotate(1.5deg);
+    box-shadow: 6px 6px 0 var(--red-dark);
+}
+
+.puissance4 h3:empty {
+    display: none;
+}
+
+.puissance4 table {
+    margin: 0;
+    padding: 6px;
+    border: 6px solid var(--white) !important;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background-color: var(--black);
+    border-radius: 0;
+    transform: rotate(-1.5deg);
+    box-shadow:
+        8px 8px 0 var(--red-dark),
+        8px 8px 0 4px var(--black),
+        14px 14px 0 4px var(--black);
+}
+
+.puissance4 td {
+    width: var(--cell) !important;
+    height: var(--cell) !important;
+    border: none !important;
+    border-radius: 0;
+    cursor: pointer;
+    clip-path: polygon(
+        20% 0, 80% 0, 80% 10%, 90% 10%, 90% 20%, 100% 20%,
+        100% 80%, 90% 80%, 90% 90%, 80% 90%, 80% 100%,
+        20% 100%, 20% 90%, 10% 90%, 10% 80%, 0 80%,
+        0 20%, 10% 20%, 10% 10%, 20% 10%
+    );
+    animation-timing-function: steps(6) !important;
+    transition: filter 0.1s steps(2);
+}
+
+.puissance4 td[style*="white"]  { background: var(--grey) !important; }
+.puissance4 td[style*="red"]    { background: var(--red) !important; }
+.puissance4 td[style*="yellow"] { background: var(--yellow) !important; }
+
+.puissance4 td[style*="red"],
+.puissance4 td[style*="yellow"] {
+    background-image:
+        linear-gradient(var(--hl, transparent), var(--hl, transparent)) !important;
+    background-repeat: no-repeat !important;
+    background-size: 20% 20% !important;
+    background-position: 30% 30% !important;
+}
+
+.puissance4 td[style*="red"]    { --hl: #ff6b6b; }
+.puissance4 td[style*="yellow"] { --hl: #fffbb0; }
+
+.puissance4 td[style*="white"]:hover {
+    background: var(--white) !important;
+}
+
+.puissance4 .red    { background-color: var(--red); }
+.puissance4 .yellow { background-color: var(--yellow); }
+
+/* Message fin de partie */
+.puissance4 > div:not(#scoreDisplay) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    padding: 24px 28px;
+    text-align: center;
+    background: var(--black);
+    border: 5px solid var(--white);
+    transform: translate(-50%, -50%) rotate(-3deg);
+    box-shadow:
+        10px 10px 0 var(--red),
+        0 0 0 100vmax rgba(0, 0, 0, 0.7);
+}
+
+.puissance4 h2 {
+    margin: 0 0 20px;
+    font-size: clamp(0.7rem, 2.6vh, 1.1rem);
+    line-height: 1.6;
+    color: var(--white);
+    text-shadow: 3px 3px 0 var(--red);
+}
+
+.puissance4 button {
+    margin: 0;
+    padding: 12px 18px;
+    font-family: inherit;
+    font-size: clamp(0.5rem, 1.8vh, 0.75rem);
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--white);
+    border: 4px solid var(--black);
+    box-shadow: 4px 4px 0 var(--red);
+    cursor: pointer;
+    transform: skewX(-8deg);
+}
+
+.puissance4 button:hover {
+    color: var(--white);
+    background: var(--red);
+    border-color: var(--white);
+}
+
+.puissance4 button:active {
+    transform: skewX(-8deg) translate(4px, 4px);
+    box-shadow: none;
+}
+
+.puissance4 #scoreDisplay {
+    padding: 1vh 16px;
+    font-size: clamp(0.5rem, 1.7vh, 0.75rem);
+    line-height: 1.8;
+    text-align: center;
+    color: var(--black);
+    background: var(--white);
+    border: 4px solid var(--black);
+    transform: rotate(-1deg);
+    box-shadow: 5px 5px 0 var(--red-dark);
+}
+
+.puissance4 #scoreDisplay:empty {
+    display: none;
+}
+
+/*Formulaire des noms*/
+.puissance4 .p4-noms {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 28px;
+    background: var(--black);
+    border: 5px solid var(--white);
+    transform: rotate(-1.5deg);
+    box-shadow: 10px 10px 0 var(--red-dark);
+}
+
+.puissance4 .p4-noms label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+    font-size: clamp(0.5rem, 1.8vh, 0.75rem);
+    border-left: 8px solid var(--white);
+}
+
+.puissance4 .p4-noms .p4-rouge { border-left-color: var(--red); }
+.puissance4 .p4-noms .p4-jaune { border-left-color: var(--yellow); }
+
+.puissance4 .p4-noms input {
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: clamp(0.5rem, 1.8vh, 0.75rem);
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--white);
+    border: 4px solid var(--black);
+    outline: none;
+}
+
+.puissance4 .p4-noms input:focus {
+    border-color: var(--red);
+}
+
+@keyframes drop {
+    0%   { transform: translateY(-300%); }
+    100% { transform: translateY(0); }
+}

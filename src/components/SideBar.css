@@ -1,0 +1,64 @@
+.sidebar {
+  width: 240px;
+  background: var(--pink-sidebar);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0 0 0;
+  flex-shrink: 0;
+}
+.section-title {
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 12.5px;
+  padding: 4px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 0 0 4px 0;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.fleche {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  transform: rotate(-90deg);
+}
+
+.fleche.ouverte {
+  transform: rotate(0deg);
+}
+
+.liste-projets { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; }
+
+.liste-projets li {
+  padding: 6px 16px;
+  color: var(--text-light);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.liste-projets li.actif { 
+  background: var(--pink-actif); 
+}
+
+.sidebar-footer { 
+  padding: 12px 16px; 
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: auto;
+}
+
+.section-title:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.section-title.actif {
+  background: var(--pink-actif);
+}
+
+.liste-projets li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

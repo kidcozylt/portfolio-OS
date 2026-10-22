@@ -1,0 +1,46 @@
+.about h1 {
+  margin-bottom: 16px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 36px;
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+  border-color: currentColor;
+}
+
+.about-card h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.about-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Responsive : 1 colonne sur petits écrans */
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

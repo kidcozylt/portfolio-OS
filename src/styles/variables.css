@@ -1,0 +1,21 @@
+:root {
+  --dark: #eeb4bf;          /* barre de titre / barre de statut */
+  --pink-sidebar: #f0b3c4;  /* fond sidebar */
+  --pink-actif: #e2879e;    /* item / onglet actif */
+  --peach-tabs: #ecc9a4;    /* fond barre d'onglets (onglets inactifs) */
+  --peach-contenu: #e8ceac; /* zone de contenu */
+  --pink-header: #f6c9d3;   /* fond des titres de section sidebar */
+  --text-light: #ffffff;
+  --text-dark: #2a2a2a;
+  --border-radius: 10px;
+}
+
+:root[data-theme="dark"] {
+  --dark: #25252F;
+  --pink-sidebar: #25252F;
+  --pink-actif: #6B4F74;
+  --peach-tabs: #1E1E27;
+  --peach-contenu: #6B4F74;
+  --pink-header: #2F2F3B;
+  --text-dark: #E8E8EE;
+}
